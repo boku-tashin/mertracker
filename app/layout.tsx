@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Footer from "../components/Footer"; // ✅ ここを追加
+import "@/app/globals.css"; // 絶対パスで統一するのもオススメです
+import Footer from "@/components/Footer"; // ✅ 絶対パスに修正
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
