@@ -64,8 +64,8 @@ export default function AveragePage() {
         </table>
 
         <div className="mt-6 text-center">
-          <Link href="/">
-            <span className="text-blue-600 hover:underline">← トップに戻る</span>
+          <Link href="/" passHref>
+            <a className="text-blue-600 hover:underline">← トップに戻る</a>
           </Link>
         </div>
       </main>

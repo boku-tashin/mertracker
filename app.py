@@ -1,4 +1,5 @@
 from flask import Flask, Response, render_template_string, request, jsonify
+from flask_cors import CORS  # ← 追加
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -10,8 +11,9 @@ from collections import Counter
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
+CORS(app)  # ← 追加：すべてのオリジンからのアクセスを許可
 
-DATA_DIR = os.path.expanduser("~/Desktop/martracker/martracker/data")  # 必要に応じてパスを修正
+DATA_DIR = os.path.expanduser("~/Desktop/mertracker/mertracker/data")  # 必要に応じて修正
 
 def load_price_data():
     keywords = ["PS5", "Switch", "iPhone"]

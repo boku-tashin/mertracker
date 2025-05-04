@@ -12,19 +12,17 @@ export default function FavoritesPage() {
       </Head>
 
       <main className="min-h-screen bg-white">
-        {/* セクション */}
         <div className="max-w-4xl mx-auto px-6 py-10">
           <h1 className="text-xl font-bold text-blue-600 mb-6 flex items-center">
             <span className="mr-2">📦</span> お気に入り一覧
           </h1>
 
-          {/* お気に入りのタグ一覧 */}
           <div className="flex flex-wrap gap-4">
             {mockFavorites.map((keyword, i) => (
-              <Link href={`/product/${keyword}`} key={i}>
-                <button className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:opacity-90 transition">
+              <Link href={`/product/${keyword}`} passHref key={i}>
+                <a className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:opacity-90 transition">
                   {keyword}
-                </button>
+                </a>
               </Link>
             ))}
           </div>

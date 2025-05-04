@@ -10,36 +10,34 @@ export default function Header({ favoriteCount }: HeaderProps) {
     <header className="bg-blue-700 text-white py-4 px-6">
       <div className="container mx-auto flex justify-between items-center">
         {/* ロゴ＋テキスト */}
-        <Link href="/" passHref>
-          <a className="flex items-center space-x-3 hover:opacity-90 cursor-pointer">
+        <Link href="/" className="flex items-center space-x-3 hover:opacity-90 cursor-pointer">
+          <div className="flex items-center space-x-3">
             <Image
               src="/logo.png"
               alt="MerTracking Logo"
               width={40}
               height={40}
-              className="object-contain"
+              style={{ objectFit: 'contain' }}
             />
             <div className="leading-tight">
               <div className="text-xs">メルカリ相場トラッキング</div>
               <div className="text-lg font-semibold">Mer Tracking</div>
             </div>
-          </a>
+          </div>
         </Link>
 
         {/* ナビゲーション */}
         <nav className="flex items-center space-x-6 text-sm font-semibold">
-          <Link href="/" passHref>
-            <a className="hover:underline cursor-pointer">TOP</a>
+          <Link href="/" className="hover:underline cursor-pointer">
+            TOP
           </Link>
-          <Link href="/favorites" passHref>
-            <a className="relative hover:underline cursor-pointer">
-              お気に入り
-              {favoriteCount > 0 && (
-                <span className="absolute -top-2 -right-4 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                  {favoriteCount}
-                </span>
-              )}
-            </a>
+          <Link href="/favorites" className="relative hover:underline cursor-pointer">
+            お気に入り
+            {favoriteCount > 0 && (
+              <span className="absolute -top-2 -right-4 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                {favoriteCount}
+              </span>
+            )}
           </Link>
         </nav>
       </div>

@@ -39,11 +39,14 @@ export default function PopularKeywords({ title, type }: Props) {
     <div className="mt-6">
       <h2 className="text-md font-bold text-gray-700 mb-2">{title}</h2>
       <div className="flex flex-wrap gap-2">
-        {keywords.map((kw, i) => (
-          <Link key={i} href={`/search?keyword=${encodeURIComponent(kw)}`}>
-            <span className="cursor-pointer bg-white text-gray-700 border border-gray-300 px-3 py-1 rounded-full text-sm hover:bg-blue-600 hover:text-white transition">
-              #{kw}
-            </span>
+        {keywords.map((kw) => (
+          <Link
+            key={kw}
+            href={`/search?keyword=${encodeURIComponent(kw)}`}
+            aria-label={`キーワード検索：${kw}`}
+            className="cursor-pointer bg-white text-gray-700 border border-gray-300 px-3 py-1 rounded-full text-sm hover:bg-blue-600 hover:text-white transition"
+          >
+            #{kw}
           </Link>
         ))}
       </div>
