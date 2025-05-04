@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
-DATA_DIR = os.path.expanduser("~/Desktop/martracker/martracker/data")
+DATA_DIR = os.path.expanduser("~/Desktop/martracker/martracker/data")  # 必要に応じてパスを修正
 
 def load_price_data():
     keywords = ["PS5", "Switch", "iPhone"]
