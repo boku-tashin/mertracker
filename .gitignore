@@ -44,4 +44,4 @@ next-env.d.ts
 
 # editor settings
 .vscode/
-.idea/
+.idea/node_modules/
