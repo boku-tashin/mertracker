@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "../components/Footer"; // ✅ この行を追加
+import Footer from "../components/Footer"; // ✅ ← これを忘れずに！
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <main>{children}</main>
-        <Footer /> {/* ✅ 呼び出しOK */}
+        <Footer />
       </body>
     </html>
   );
