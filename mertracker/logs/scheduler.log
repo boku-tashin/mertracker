@@ -1,0 +1,118 @@
+📦 Mercariスクレイピング実行中...
+✅ スクリプト開始
+🚀 Chromeドライバ起動中...
+
+--------------------------------------------
+🔍 キーワード: PS5
+🌐 アクセス先: https://jp.mercari.com/search?keyword=PS5
+✅ ページタイトル取得: 【2025年最新】PS5の人気アイテム - メルカリ
+✅ 平均価格: ¥12972
+✅ 保存完了: /Users/tsudukitashin/Desktop/mertracker/mertracker/data/ps5_prices.csv
+
+--------------------------------------------
+🔍 キーワード: Switch
+🌐 アクセス先: https://jp.mercari.com/search?keyword=Switch
+✅ ページタイトル取得: 【2025年最新】Switchの人気アイテム - メルカリ
+✅ 平均価格: ¥14757
+✅ 保存完了: /Users/tsudukitashin/Desktop/mertracker/mertracker/data/switch_prices.csv
+
+--------------------------------------------
+🔍 キーワード: iPhone
+🌐 アクセス先: https://jp.mercari.com/search?keyword=iPhone
+✅ ページタイトル取得: 【2025年最新】iPhoneの人気アイテム - メルカリ
+✅ 平均価格: ¥9722
+✅ 保存完了: /Users/tsudukitashin/Desktop/mertracker/mertracker/data/iphone_prices.csv
+
+👋 終了しました
+
+🔁 スケジューラー起動中...
+📦 Mercariスクレイピング実行中...
+✅ スクリプト開始
+🚀 Chromeドライバ起動中...
+
+--------------------------------------------
+🔍 キーワード: PS5
+🌐 アクセス先: https://jp.mercari.com/search?keyword=PS5
+❌ エラー発生（PS5）: Message: unknown error: cannot determine loading status
+from target frame detached
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+0   chromedriver                        0x0000000100c96e10 cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000100c8f0ac cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x00000001007d674c cxxbridge1$string$len + 92632
+3   chromedriver                        0x00000001007c0ac0 cxxbridge1$string$len + 3404
+4   chromedriver                        0x00000001007be8f8 chromedriver + 190712
+5   chromedriver                        0x00000001007bf488 chromedriver + 193672
+6   chromedriver                        0x00000001007cd498 cxxbridge1$string$len + 55076
+7   chromedriver                        0x00000001007e2e3c cxxbridge1$string$len + 143560
+8   chromedriver                        0x00000001007bfabc chromedriver + 195260
+9   chromedriver                        0x00000001007e27dc cxxbridge1$string$len + 141928
+10  chromedriver                        0x000000010085ea9c cxxbridge1$string$len + 650536
+11  chromedriver                        0x0000000100811a80 cxxbridge1$string$len + 335116
+12  chromedriver                        0x0000000100c5bc98 cxxbridge1$str$ptr + 2575000
+13  chromedriver                        0x0000000100c5ef64 cxxbridge1$str$ptr + 2588004
+14  chromedriver                        0x0000000100c3ba20 cxxbridge1$str$ptr + 2443296
+15  chromedriver                        0x0000000100c5f7e0 cxxbridge1$str$ptr + 2590176
+16  chromedriver                        0x0000000100c2cb14 cxxbridge1$str$ptr + 2382100
+17  chromedriver                        0x0000000100c7f9c4 cxxbridge1$str$ptr + 2721732
+18  chromedriver                        0x0000000100c7fb50 cxxbridge1$str$ptr + 2722128
+19  chromedriver                        0x0000000100c8ecf8 cxxbridge1$str$ptr + 2783992
+20  libsystem_pthread.dylib             0x000000018c9202e4 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000018c91b0fc thread_start + 8
+
+
+--------------------------------------------
+🔍 キーワード: Switch
+🌐 アクセス先: https://jp.mercari.com/search?keyword=Switch
+❌ エラー発生（Switch）: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+0   chromedriver                        0x0000000100c96e10 cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000100c8f0ac cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x00000001007d68d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x00000001007b0758 chromedriver + 132952
+4   chromedriver                        0x0000000100845734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x000000010085e2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000100811a80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x0000000100c5bc98 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x0000000100c5ef64 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x0000000100c3ba20 cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x0000000100c5f7e0 cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000100c2cb14 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x0000000100c7f9c4 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x0000000100c7fb50 cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x0000000100c8ecf8 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x000000018c9202e4 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000018c91b0fc thread_start + 8
+
+
+--------------------------------------------
+🔍 キーワード: iPhone
+🌐 アクセス先: https://jp.mercari.com/search?keyword=iPhone
+❌ エラー発生（iPhone）: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+0   chromedriver                        0x0000000100c96e10 cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000100c8f0ac cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x00000001007d68d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x00000001007b0758 chromedriver + 132952
+4   chromedriver                        0x0000000100845734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x000000010085e2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000100811a80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x0000000100c5bc98 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x0000000100c5ef64 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x0000000100c3ba20 cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x0000000100c5f7e0 cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000100c2cb14 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x0000000100c7f9c4 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x0000000100c7fb50 cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x0000000100c8ecf8 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x000000018c9202e4 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000018c91b0fc thread_start + 8
+
+
+👋 終了しました
+
+📦 Mercariスクレイピング実行中...
