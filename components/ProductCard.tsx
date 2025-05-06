@@ -3,7 +3,6 @@ import { HeartIcon as SolidHeart } from '@heroicons/react/24/solid'
 import { HeartIcon as OutlineHeart } from '@heroicons/react/24/outline'
 
 type Props = {
-  id: number
   name: string
   price: number
   image: string
@@ -12,7 +11,6 @@ type Props = {
 }
 
 export default function ProductCard({
-  id,
   name,
   price,
   image,
