@@ -3,7 +3,7 @@ import { HeartIcon as SolidHeart } from '@heroicons/react/24/solid'
 import { HeartIcon as OutlineHeart } from '@heroicons/react/24/outline'
 
 type Props = {
-  id: number // ← 必要！
+  id: number // ← これが絶対必要です！
   name: string
   price: number
   image: string
