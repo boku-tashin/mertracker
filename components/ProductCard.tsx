@@ -1,9 +1,8 @@
-// components/ProductCard.tsx
 import { HeartIcon as SolidHeart } from '@heroicons/react/24/solid'
 import { HeartIcon as OutlineHeart } from '@heroicons/react/24/outline'
 
 type Props = {
-  id: number // ← これが絶対必要です！
+  id: number // ← 👈 ここを追加
   name: string
   price: number
   image: string
@@ -12,7 +11,7 @@ type Props = {
 }
 
 export default function ProductCard({
-  id,
+  id, // ← 👈 ここも追加（propsとして受け取る）
   name,
   price,
   image,
