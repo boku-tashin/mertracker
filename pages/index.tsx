@@ -1,8 +1,9 @@
+// pages/index.tsx
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://your-flask-api.onrender.com' // ← Fallbackを設定
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -90,7 +91,6 @@ export default function Home() {
 
       <main className="bg-gray-50 min-h-screen pb-10">
         <div className="max-w-3xl mx-auto px-4">
-          {/* 🔍 検索ボックス */}
           <div className="mt-8 text-center">
             <input
               type="text"
@@ -102,7 +102,6 @@ export default function Home() {
                 if (e.key === 'Enter') handleSearch(searchQuery)
               }}
             />
-            {/* 🔁 検索履歴 */}
             <div className="flex flex-wrap gap-2 justify-center text-sm text-gray-400 mt-2">
               {searchHistory.map((kw, i) => (
                 <button
@@ -116,25 +115,21 @@ export default function Home() {
             </div>
           </div>
 
-          {/* セクション：人気商品 */}
           <section className="mt-10">
             <h2 className="text-lg font-semibold mb-4">人気商品💡</h2>
             {renderKeywordButtons(ranking, '🔍', 'bg-white text-blue-600 hover:bg-blue-600 hover:text-white')}
           </section>
 
-          {/* セクション：急上昇 */}
           <section className="mt-10">
             <h2 className="text-lg font-semibold mb-4">急上昇🔥</h2>
             {renderKeywordButtons(surging, '📈', 'bg-white text-red-600 hover:bg-red-600 hover:text-white')}
           </section>
 
-          {/* セクション：相場変動 */}
           <section className="mt-10">
             <h2 className="text-lg font-semibold mb-4">相場変動📉</h2>
             {renderKeywordButtons(otherKeywords, '📊', 'bg-white text-gray-600 hover:bg-gray-600 hover:text-white')}
           </section>
 
-          {/* セクション：お気に入り */}
           <section className="mt-10">
             <h2 className="text-lg font-semibold mb-4">お気に入り📈</h2>
             {renderKeywordButtons(
