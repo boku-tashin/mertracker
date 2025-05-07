@@ -3,7 +3,7 @@ import { HeartIcon as SolidHeart } from '@heroicons/react/24/solid'
 import { HeartIcon as OutlineHeart } from '@heroicons/react/24/outline'
 
 type Props = {
-  id: number // ← これを追加！
+  id: number // ← 使わなくても定義だけする
   name: string
   price: number
   image: string
@@ -12,7 +12,7 @@ type Props = {
 }
 
 export default function ProductCard({
-  id,
+  id, // ← 型の整合性のため受け取る（使わなくてもOK）
   name,
   price,
   image,
