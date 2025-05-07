@@ -3,11 +3,15 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { useState } from 'react'
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL
+
 export default function ProductPage() {
   const router = useRouter()
   const { id } = router.query
   const [graphType, setGraphType] = useState<'line' | 'bar'>('line')
   const [days, setDays] = useState<number>(7)
+
+  const keyword = typeof id === 'string' ? id : ''
 
   return (
     <>
@@ -54,13 +58,17 @@ export default function ProductPage() {
         </div>
 
         {/* グラフ画像（Flaskで提供） */}
-        <div className="bg-gray-100 rounded shadow p-4">
-          <img
-            src={`http://localhost:5001/graph?keyword=${id}&type=${graphType}&days=${days}&t=${Date.now()}`}
-            alt={`価格グラフ - ${id}`}
-            className="w-full border rounded"
-          />
-        </div>
+        {keyword ? (
+          <div className="bg-gray-100 rounded shadow p-4">
+            <img
+              src={`${API_URL}/graph?keyword=${keyword}&type=${graphType}&days=${days}&t=${Date.now()}`}
+              alt={`価格グラフ - ${keyword}`}
+              className="w-full border rounded"
+            />
+          </div>
+        ) : (
+          <p className="text-gray-500">キーワードを読み込み中...</p>
+        )}
       </main>
     </>
   )
