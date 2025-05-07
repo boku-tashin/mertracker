@@ -1,3 +1,4 @@
+// pages/search.tsx
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
@@ -9,13 +10,12 @@ import fs from 'fs'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
 
-// 🔍 検索キーワードをログに送信
 const logSearch = async (keyword: string) => {
   try {
     await fetch(`${API_URL}/api/log`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ keyword })
+      body: JSON.stringify({ keyword }),
     })
   } catch (error) {
     console.error('検索ログ送信エラー:', error)
@@ -41,17 +41,13 @@ export default function SearchPage({ products }: { products: Product[] }) {
   useEffect(() => {
     if (!keyword) return
 
-    // 🔍 フィルター処理
     const result = products.filter((p) =>
       p.name.toLowerCase().includes(keyword) ||
       p.category.toLowerCase().includes(keyword)
     )
     setFiltered(result)
-
-    // 🔁 ログ送信
     logSearch(keyword)
 
-    // 🕓 ローカル検索履歴更新
     const stored = JSON.parse(localStorage.getItem('searchHistory') || '[]')
     const updated = [keyword, ...stored.filter((k: string) => k !== keyword)].slice(0, 10)
     localStorage.setItem('searchHistory', JSON.stringify(updated))
@@ -80,7 +76,6 @@ export default function SearchPage({ products }: { products: Product[] }) {
       <div className="max-w-5xl mx-auto px-4 py-6">
         <h1 className="text-2xl font-bold mb-4">🔍 検索結果：「{keyword}」</h1>
 
-        {/* 🔁 検索履歴 */}
         {recentKeywords.length > 0 && (
           <div className="mb-4 text-sm text-gray-500">
             <span className="mr-2">最近の検索：</span>
@@ -96,7 +91,6 @@ export default function SearchPage({ products }: { products: Product[] }) {
           </div>
         )}
 
-        {/* 📊 統計表示 */}
         {filtered.length > 0 && (
           <div className="bg-white border rounded p-4 mb-6 shadow text-sm text-gray-700">
             <div className="flex flex-wrap gap-6">
@@ -108,13 +102,12 @@ export default function SearchPage({ products }: { products: Product[] }) {
           </div>
         )}
 
-        {/* 🛍️ 商品リスト */}
         {filtered.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {filtered.map((item, index) => (
               <ProductCard
                 key={index}
-                id={index}
+                id={index}  // ← 追加！これで型エラー解決
                 name={item.name}
                 price={item.price}
                 image={item.image}
@@ -140,7 +133,6 @@ export default function SearchPage({ products }: { products: Product[] }) {
   )
 }
 
-// ✅ 静的データ取得
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), 'public/data/products.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
